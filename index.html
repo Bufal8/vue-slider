@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        
+        <h1 class="titolo">{{movies.title}}</h1>
+        
+        <div class="container">
+            
+            <div class="locandina">
+
+                <img v-for="(img,index) in movies" :src="img.image" alt="">
+                
+            </div>
+            
+           
+            
+            <div class="frecce"></div>
+            
+            <div class="info">
+            
+                <h3 class="titolo">{{ movies.title }}</h3>
+            
+                <div class="sinossi">{{movies.text}}</div>
+            
+            </div>
+        </div>
+
+        <div class="thumbnail">
+            <img v-for="img in movies.image" :src="img" alt="">
+        </div>
+
+
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

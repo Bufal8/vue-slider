@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 1000px;
+}
+
+.locandina{
+    width: 500px;
+}
+
+#right {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+
+#left {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+}
+
