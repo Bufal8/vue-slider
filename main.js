@@ -55,9 +55,9 @@ createApp({
             clearInterval(this.timer);
             this.timer = setInterval(this.nextImage, 3000);
         },
-        // stopAutoPlay(){
-        //     clearInterval(this.timer);
-        // }
+        stopAutoPlay(){
+            clearInterval(this.timer);
+        }
     }
 }).mount("#app");
 

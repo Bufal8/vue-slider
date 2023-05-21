@@ -15,7 +15,7 @@
         <div class="container">
             
             <!-- div contenitore immagini -->
-            <div class="locandina" @mouseleave="autoPlay">
+            <div class="locandina" @mouseover="stopAutoPlay" @mouseleave="autoPlay">
 
                 <img v-for="(img, index) in movies" :src="img.image" alt="" class="inactive"  :class="activeImage === index ? 'active' : ''">
 
