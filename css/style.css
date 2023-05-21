@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* CORPO PAGINA */
 body{
     background-color: lightcoral;
 }
@@ -12,13 +13,35 @@ body{
     height: 100vh;
     align-items: center;
     display: flex;
+    position: relative;
 }
 
+/* FOTO + TESTO */
 .locandina{
     width: 75%;
     height: 60%;
     margin: 0 auto;
 }
+
+.info{
+    position: absolute;
+    width: 55%;
+    height: 15%;
+    right: 25%;
+    bottom: 21%;
+
+    /* background-color: rgba(255, 255, 255, 0.3); */
+}
+
+.info span{
+    font-size: 13px;
+    color: white;
+}
+
+.info h3{
+    text-align: center;
+    color: white;}
+
 
 img{
     height: 100%;
@@ -26,6 +49,7 @@ img{
     object-fit: cover;
 }
 
+/* CARATTERISTICHE DI STATO */
 .inactive{
     display: none;
 }
@@ -34,6 +58,8 @@ img{
     display: block;
 }
 
+
+/* THUMBNAIL */
 .thumbnail{
     position: relative;
     width: 25%;
@@ -54,6 +80,9 @@ img{
 
 }
 
+
+
+/* FRECCE */
 .right-arrow i{
     position: absolute;
     top: 50%;
