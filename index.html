@@ -19,19 +19,19 @@
             <!-- div contenitore immagini -->
             <div class="locandina">
 
-                <img v-for="(img,index) in movies" :src="img.image" alt="">
+                <img v-for="(img, index) in movies" :src="img.image" alt="" class="inactive" :class="activeImage === index ? 'active' : ''">
 
             </div>
             
            
-            <!-- Ddiv contenitore frecce -->
+            <!-- div contenitore frecce -->
             <div class="frecce">
 
-                <div class="right-arrow">
+                <div class="right-arrow" @click="nextImage">
                     <i class="fa-solid fa-chevron-right"></i>
                 </div>
 
-                <div class="left-arrow">
+                <div class="left-arrow" @click="prevImage">
                     <i class="fa-solid fa-chevron-left"></i>
                 </div>
             </div>
@@ -43,11 +43,17 @@
                 <div class="sinossi">{{movies.text}}</div>
             
             </div>
+            
+            <div class="thumbnail">
+                <!-- blocco immagini thumbnail -->
+                <div v-for="(img, index) in movies">
+                    <img :src="img.image" class="" :class="activeImage === index ? 'thumb-active' : 'thumb-inactive'" @click="activeImg = index">
+                </div>
+                
+            
+            </div>
         </div>
 
-        <div class="thumbnail">
-            <img v-for="img in movies.image" :src="img.image" alt="">
-        </div>
 
 
     </div>
