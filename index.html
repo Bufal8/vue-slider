@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
@@ -12,17 +13,28 @@
         
         <h1 class="titolo">{{movies.title}}</h1>
         
+        <!-- div contenitore pagina -->
         <div class="container">
             
+            <!-- div contenitore immagini -->
             <div class="locandina">
 
                 <img v-for="(img,index) in movies" :src="img.image" alt="">
-                
+
             </div>
             
            
-            
-            <div class="frecce"></div>
+            <!-- Ddiv contenitore frecce -->
+            <div class="frecce">
+
+                <div class="right-arrow">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+
+                <div class="left-arrow">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+            </div>
             
             <div class="info">
             
@@ -34,7 +46,7 @@
         </div>
 
         <div class="thumbnail">
-            <img v-for="img in movies.image" :src="img" alt="">
+            <img v-for="img in movies.image" :src="img.image" alt="">
         </div>
 
 
