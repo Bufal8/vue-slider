@@ -34,7 +34,7 @@
             <div class="thumbnail">
                 <!-- blocco immagini thumbnail -->
                 <div v-for="(img, index) in movies">
-                    <img :src="img.image" class="" :class="activeImage === index ? 'thumb-active' : 'thumb-inactive'" @click="activeImg = index">
+                    <img :src="img.image" class="" :class="activeImage === index ? 'thumb-active' : 'thumb-inactive'" @click="activeImage = index">
                 </div>
                 
             
